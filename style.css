@@ -4,6 +4,10 @@
   font-family: "Alexandria", sans-serif;
 }
 
+html {
+  touch-action: manipulation;
+}
+
 :root {
   --body: #223355;
   --task: #2A4262;
