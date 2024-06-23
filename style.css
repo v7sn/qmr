@@ -66,10 +66,24 @@ body {
   border: none;
   border-radius: 20px;
   user-select: none;
+  transition: .1s;
+  cursor: pointer;
+}
+
+#settings .settings-bar button:hover {
+  background: var(--white);
+  color: var(--body);
+}
+
+#settings .settings-bar button:active {
+  cursor: context-menu;
+  background: var(--transparent);
+  color: var(--white);
 }
 
 #settings .settings-bar .date {
   flex: 1;
+  margin: 10px;
   background: none;
 }
 
@@ -115,6 +129,18 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: .1s;
+}
+
+#main .main-bar button:hover {
+  background: var(--transparent);
+}
+
+#main .main-bar button:active {
+  cursor: context-menu;
+  background: var(--task);
+  color: var(--white);
 }
 
 #main .main-bar button .button-bar {
@@ -160,6 +186,10 @@ body {
   font-size: 20px;
   border-radius: 20px;
   color: var(--grey);
+}
+
+#main .main-bar button .add:hover {
+  color: var(--white);
 }
 
 
@@ -209,6 +239,18 @@ body {
   border: none;
   border-radius: 20px;
   user-select: none;
+  cursor: pointer;
+}
+
+#profile-settings .profile-settings-bar button:hover {
+  background: var(--white);
+  color: var(--body);
+}
+
+#profile-settings .profile-settings-bar button:active {
+  cursor: context-menu;
+  background: var(--transparent);
+  color: var(--white);
 }
 
 #profile-settings .profile-settings-bar .profile-title {
@@ -261,6 +303,16 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+#profile-main .profile-main-bar button:hover {
+  background: var(--transparent);
+}
+
+#profile-main .profile-main-bar button:active {
+  background: var(--task);
+  cursor: context-menu;
 }
 
 #profile-main .profile-main-bar button .profile-button-bar {
