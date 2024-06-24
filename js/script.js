@@ -41,4 +41,30 @@ if ('serviceWorker' in navigator) {
     }).catch(error => {
       console.log('Service Worker registration failed:', error);
     });
-} 
+}
+
+
+
+function addPoint(maxTime, event) {
+  const taskElement = event.target.closest('.button-bar').parentElement;
+  const taskTimeElement = taskElement.querySelector('.task-time');
+  const progressBarElement = taskElement.querySelector('.progress-bar');
+
+  let currentTime = parseInt(taskTimeElement.innerText.split(' / ')[0]);
+
+  if (currentTime < maxTime) {
+    currentTime += 1;
+    taskTimeElement.innerText = `${currentTime} / ${maxTime}`;
+
+    const progressPercentage = (currentTime / maxTime) * 100;
+    progressBarElement.style.width = `${progressPercentage}%`;
+  }
+
+  if (currentTime === maxTime) {
+    progressBarElement.style.borderRadius = "20px";
+
+    const checkPoint = taskElement.querySelector('.add');
+    checkPoint.innerHTML = '<i class="fa-solid fa-check"></i>';
+    checkPoint.style.color = "#fff";
+  }
+}
