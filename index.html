@@ -60,7 +60,11 @@
         <section id="main">
             <div class="main-bar">
 
+
+
                 <button id="drink-water">
+                    <div style="background: skyblue;" class="progress-bar"></div>
+
                     <div class="button-bar">
 
                         <div class="icon">
@@ -70,14 +74,18 @@
                             <p class="task-name">شرب الماء</p>
                             <p class="task-time"> 0 / 5 </p>
                         </div>
-                        <div onclick="" class="add">
+                        <div class="add" onclick="addPoint(5, event)">
                             <i class="fa-solid fa-plus"></i>
                         </div>
 
                     </div>
                 </button>
 
+
+
                 <button id="brush-teeth">
+                    <div style="background: pink;" class="progress-bar"></div>
+
                     <div class="button-bar">
 
                         <div class="icon">
@@ -87,12 +95,14 @@
                             <p class="task-name">تفريش الأسنان</p>
                             <p class="task-time"> 0 / 3 </p>
                         </div>
-                        <div onclick="" class="add">
+                        <div class="add" onclick="addPoint(3, event)">
                             <i class="fa-solid fa-plus"></i>
                         </div>
 
                     </div>
                 </button>
+
+
 
             </div>
         </section>
